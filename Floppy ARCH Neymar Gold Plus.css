@@ -1,0 +1,27 @@
+body
+{
+  overflow: hidden;
+}
+.titulo
+    {
+        position: absolute;
+        top: -20%;
+        left: 6%;
+        animation: rubberBand 4s;
+        animation: bounceInDown 4s;  
+}
+.discneymar
+    {
+        position: absolute;
+        top: 25%;
+        left: 25%;  
+        animation: fadeInLeftBig 3s;
+        }
+.texto
+{ 
+    color: yellow; 
+    animation: fadeInRightBig 3s; 
+    position: absolute; 
+    top: -550%; 
+    left: 100%  
+}

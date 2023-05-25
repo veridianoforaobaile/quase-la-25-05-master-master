@@ -1,0 +1,86 @@
+body
+{
+    overflow: hidden;
+    
+}
+.linha1
+{
+    color: white;
+    position:absolute;
+    top: 25%;
+    left: 40%;
+    animation: bounceInUp 4s;
+
+}
+.linha2
+{
+  
+    color: white;
+    position:absolute;
+    top: 35%;
+    left: 40%;
+    animation: bounceInUp 4s;
+
+}
+.img1
+{
+ position: absolute;
+ top: 24%;
+ left: 33%;
+ animation: bounceInUp 4s;
+
+}
+.img2
+{
+ position: absolute;
+ top: 35%;
+ left: 33%;
+ animation: bounceInUp 4s;
+
+}
+.linha3
+{
+    color: white;
+    position:absolute;
+    top: 46%;
+    left: 40%;
+    animation: bounceInUp 4s;
+
+}
+.img3
+{
+ position: absolute;
+ top: 45%;
+ left: 33%;
+ animation: bounceInUp 4s;
+
+}
+.disquete
+   {
+       position: absolute;
+       height: 300px;
+       left: 10%;
+       top: 20%;
+       animation: fadeInLeftBig 4s;
+       
+   }
+
+   .disquete2
+   {
+       position: absolute;
+       height: 300px;
+       left: 70%;
+       top: 20%;
+       animation: fadeInRightBig 4s;
+      
+   }
+
+   .titulo
+   {
+       position: absolute;
+       top: -20%;
+       left: 6%;
+       animation: rubberBand 4s;
+       animation: bounceInDown 4s;
+      
+}

@@ -1,0 +1,19 @@
+
+select {
+    font-family:  'AuX DotBitC Xtra SmallCaps', sans-serif;
+    font-size: 17px;
+    color: yellow;
+    background-color: darkblue;
+    width: 400px;
+    height: 50px;
+    text-align: center;
+}
+.pulha
+{
+    width: 400px;
+    height: 100px;
+    background-color: darkblue;
+    font-size: 30px;
+    color: yellow;
+    font-family:   'AuX DotBitC Xtra SmallCaps', sans-serif;;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gudu Gigabyte</title>
+    <link rel="icon" href="img/disquete gif.gif"gif>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.cssa" />
+    <link rel="stylesheet" type="text/css" href="menuteste.css">
+    <link rel="stylesheet" type="text/js" href="menuteste.js">
+    <link rel="stylesheet" type="text/css" href="gudu.css">
+    <link href="https://fonts.cdnfonts.com/css/aux-dotbitc" rel="stylesheet">
+                
+    
+
+<style type="text/css"> 
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+  
+}
+
+select {
+  margin-bottom: 0px;
+}
+.caixa_larga
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .pulha
+    {
+        width: 65px;
+        height: 45px;
+        background-color: darkblue;
+        font-size: 16px;
+        cursor: url("cursor.png");
+    }
+    .pulha:hover{
+        background-color: blue;
+    }
+</style>
+    
+</head>
+<body style="background-image: url(img/Fundo.png);">
+    <div class="titulo">
+          <img src="img/titulo.png" alt="Título">
+        
+      </div>
+    <h1 style=" color:  white; position: absolute; top: 30% ; left: 50%; animation: fadeInLeftBig 3s;font-family: 'AuX DotBitC Xtra SmallCaps', sans-serif; color: yellow;"> Gudu Disquete </h1>
+    <div class="discveridi">
+        <img src="img/diksgudu.png" width="725px">
+    </div>
+
+
+    <font style="font-size: 20px;"> 
+    <label  style="font-family: 'AuX DotBitC Xtra SmallCaps', sans-serif; color: yellow; animation: fadeInRightBig 3s; position: absolute; top: 40%; left: 50% " for="tamanho_hd">Tamanho do HD:</label>
+    <select style="font-size: 15px; animation: fadeInLeftBig 3s; position: absolute; top: 45%; left: 50% "id="tamanho_hd" onchange="atualizarPreco()">
+        <option value="1">500gb</option>
+        <option value="2">1TB</option>
+        <option value="4">2TB</option>
+    </select>
+    <label style="font-family: 'AuX DotBitC Xtra SmallCaps', sans-serif; color: yellow; animation: fadeInRightBig 3s; position: absolute; top: 55%; left: 50% "  for="preco_hd">Valor:</label>
+    <p style="font-family: 'AuX DotBitC Xtra SmallCaps', sans-serif; color: yellow; animation: fadeInLeftBig 3s;  position: absolute; top: 59%; left: 50% " id="preco_hd">R$300</p>
+    <span id="preco_hd" class="preco-hd"></span>
+    
+    </font>
+<button class="pulha" style="animation: fadeInRightBig 3s; position: absolute; top: 65%; left: 50%; display: block; margin: 0 auto;font-size: 36px; height: 50px;width: 200px;font-family: 'AuX DotBitC Xtra SmallCaps', sans-serif; color: yellow;">
+    <a href="FLOPPY ARCH carrinho.html" style="display: block; height: 100%; width: 100%; text-decoration: none; color: inherit;">
+        Comprar
+    </a>
+<font style="font-family: 'AuX DotBitC Xtra SmallCaps', sans-serif; font-size: 35px;">  
+    <h3 class="texto" > Disquete do 0gudu</h3>
+</font>
+
+
+<script type="text/javascript">
+    function atualizarPreco() {
+        var tamanho = document.getElementById("tamanho_hd").value;
+        var preco = 0;
+        if (tamanho == 1) {
+            preco = 250;
+        } else if (tamanho == 2) {
+            preco = 600;
+        } else if (tamanho == 4) {
+            preco = 800;
+        }
+        document.getElementById("preco_hd").innerHTML = "R$" + preco;
+    }
+</script>
+<img src="img/diskmenu.png" alt="Menu" id="menu-botao" class="menu-image hidden">
+
+<ul id="menu">
+    <li class="menu-item"><a href="FLOPPY ARCH comprar.html">comprar</a></li>
+    <li class="menu-item"><a href="FLOPPY ARCH carrinho.html">carrinho</a></li>
+    <li class="menu-item"><a href="FLOPPY ARCH.html">Inicio</a></li>
+    <li class="menu-item"><a href="FLOPPY ARCH entrar.html">entrar</a></li>
+    <li class="menu-item"><a href="FLOPPY ARCH contato.html">contato</a></li>
+  </ul>
+  
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="menuteste.js"></script>
+</html>   

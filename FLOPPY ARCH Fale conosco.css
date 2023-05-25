@@ -1,0 +1,32 @@
+body
+{
+  overflow: hidden;
+}
+.titulo
+    {
+        position: absolute;
+        top: -20%;
+        left: 6%;
+        animation: rubberBand 4s;
+        animation: bounceInDown 4s;
+       
+}
+    .disquete
+   {
+       position: absolute;
+       height: 300px;
+       left: 10%;
+       top: 20%;
+       animation: fadeInLeftBig 4s;
+       
+   }
+
+   .disquete2
+   {
+       position: absolute;
+       height: 300px;
+       left: 70%;
+       top: 20%;
+       animation: fadeInRightBig 4s;
+   }
+   

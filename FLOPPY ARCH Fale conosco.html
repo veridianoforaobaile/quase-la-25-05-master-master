@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+    <title>FLOPPY ARCH Fale conosco </title>
+    <link rel="stylesheet" type="text/css" href="FLOPPY ARCH Fale conosco.css">
+    <link rel="icon" href="img/disquete gif.gif" gif/gif">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <link rel="stylesheet" type="text/js" href="menu.js">
+    <link href="https://fonts.cdnfonts.com/css/spacetype" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/aux-dotbitc" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.cssa" />
+
+                
+
+</head>
+
+<body style="background-image: url(img/Fundo.png);">
+    <div class="titulo">
+          <img src="img/titulo.png" alt="Título">
+        
+      </div>
+   
+</div>
+    <div class="disc">
+        <img src="img/disquete gif.gif" class="disquete">
+        <img src="img/disquete gif.gif" class="disquete2">
+        
+        
+        <font style="animation: bounceInUp 5s;font-family: 'AuX DotBitC Xtra SmallCaps', sans-serif; color: yellow; font-size: 25px; position: absolute; left: 34%;; top: 21%;"> Mensagem :</font> :
+        <div style="animation: bounceInUp 5s; position: absolute; left:45%; top: 21%;">
+            <input type="text" id="mensagem">
+            <button style="animation: bounceInUp 5s; color: darkblue;font-family: 'AuX DotBitC Xtra SmallCaps', sans-serif;" onclick="Enviar();">Enviar</button>
+            <button style="animation: bounceInUp 5s; color: darkblue;font-family: 'AuX DotBitC Xtra SmallCaps', sans-serif;" onclick="LimparMensagens();">Limpar</button>
+        </div>
+        <div style="animation: bounceInUp 5s; position: absolute; left: 45%; top: 25%; font-size: 19px; color: yellow;font-family: 'AuX DotBitC Xtra SmallCaps', sans-serif; max-height: 300px; overflow-y:auto;"
+            id="resposta"> </div>
+    </div>
+</body>
+
+<script>
+    topico = "FLOPPY ARCH/mensagem"; // Variável que ficará no servidor MQTT
+
+    // Conexão:
+    client = new Paho.MQTT.Client("broker.hivemq.com", Number(8000), "");
+
+    // Funções executadas quando a conexão é perdida e quando uma mensagem chega:
+    client.onConnectionLost = ConexaoPerdida;
+    client.onMessageArrived = MensagemRecebida;
+
+    // Função chamada quando a conexão for realizada:
+    client.connect({
+        onSuccess: Conectar
+    });
+
+    // A função Conectar deve criar a variável (tópico) no computador remoto:
+    function Conectar() {
+
+        client.subscribe(topico); // Tópico (variável) criado no servidor MQTT
+    
+  }
+  
+  function ConexaoPerdida(responseObject) {
+    if (responseObject.errorCode !== 0) {
+      resposta.innerHTML += "Desconectado";
+    }
+  }
+
+  // Função executada quando a variável (tópico) no servidor receber uma mensagem:
+  function MensagemRecebida(message) {
+      resposta.innerHTML += "<br><br>" + message.payloadString;
+  }
+
+  function Enviar()
+  {
+    texto = mensagem.value;
+
+    message = new Paho.MQTT.Message(texto);
+    message.destinationName = topico;
+    client.send(message);
+  }
+// Função para limpar as mensagens enviadas no chat
+function LimparMensagens() {
+    document.getElementById('resposta').innerHTML = '';
+}
+</script>
+<img src="img/diskmenu.png" alt="Menu" id="menu-botao" class="menu-image hidden">
+
+<ul id="menu">
+  <li class="menu-item"><a href="FLOPPY ARCH comprar.html">comprar</a></li>
+  <li class="menu-item"><a href="FLOPPY ARCH carrinho.html">carrinho</a></li>
+  <li class="menu-item"><a href="FLOPPY ARCH.html">Inicio</a></li>
+  <li class="menu-item"><a href="FLOPPY ARCH entrar.html">entrar</a></li>
+  <li class="menu-item"><a href="FLOPPY ARCH contato.html">contato</a></li>
+</ul>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="menuteste.js"></script>
+</html>   

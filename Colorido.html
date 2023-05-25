@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gudu Gigabyte</title>
+    <title>Colorido Gigabyte</title>
     <link rel="icon" href="img/disquete.gif">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" type="text/css" href="menuteste.css">
@@ -17,66 +17,15 @@
 </head>     
 <body>
  
-        <div class="d1"></div>
+    <div class="d1"></div>
           
         <div class="d2">
             <div class="d21"></div>
-            <div class="d22">
-                <img src="img/disquete Colorido.png" alt="coloridinhouwu">
-            </div>
-            <div class="d23" style="text-align: center;">
-                Disquete Colorido
-                <br><br>
-                Tamanho do HD
-                <br>
-                <select id="tamanho_id" onchange="atualizarPreco()">
-                    <option value="1">500GB</option>
-                    <option value="2">1TB</option>
-                    <option value="4">2TB</option>
-                </select>
-                <br> 
-                <p style="font-size: 48px; font-family: 'AuX DotBitC Xtra SmallCaps', sans-serif; color: yellow; text-align: center;" id="preço_hd">R$300</p>
-                <button class="pulha">
-                    Adicionar ao carrinho
-                </button>
-            </div>
+            <div class="d22"></div>
+            <div class="d23"></div>
             <div class="d24"></div>
         </div>
-        <div class="d3">
-       
-        </div>
-   
-
-    <script type="text/javascript">
-        function atualizarPreco() {
-            var tamanho = document.getElementById("tamanho_id").value;
-            var preco = 0;
-            if (tamanho == 1) {
-                preco = 250;
-            } else if (tamanho == 2) {
-                preco = 600;
-            } else if (tamanho == 4) {
-                preco = 800;
-            }
-            document.getElementById("preço_hd").innerHTML = "R$" + preco;
-        }
-    </script>
-
-
-<img src="img/diskmenu.png" alt="menu" id="menu-botao" class="menu-image hidden">
-
-
-<ul id="menu">
-    <li class="menu-item"><a href="FLOPPY ARCH comprar.html">comprar</a></li>
-    <li class="menu-item"><a href="FLOPPY ARCH carrinho.html">carrinho</a></li>
-    <li class="menu-item"><a href="FLOPPY ARCH.html">Inicio</a></li>
-    <li class="menu-item"><a href="FLOPPY ARCH entrar.html">entrar</a></li>
-    <li class="menu-item"><a href="FLOPPY ARCH contato.html">contato</a></li>
-  </ul>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="menuteste.js"></script>
-
+    <div class="d3"></div>
 </body>
 
 </html>
